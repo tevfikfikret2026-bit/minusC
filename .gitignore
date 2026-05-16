@@ -1,0 +1,73 @@
+# ==========================================
+# Generic Build Artifacts
+# ==========================================
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.d
+*.dep
+*.srec
+*.axf
+*.i
+*.s
+
+# Directories
+build/
+Build/
+bin/
+obj/
+_gnu/
+.dep/
+Debug/
+Release/
+
+# ==========================================
+# Toolchains & IDEs
+# ==========================================
+# Keil MDK
+*.uvopt
+*.uvoptx
+*.uvproj
+*.uvprojx
+*.uv2
+*.pco
+*.cgpr
+*.crf
+*.lnp
+*.dsc
+*.htm
+Mappings/
+
+# STM32CubeIDE / TrueSTUDIO / Eclipse
+.metadata/
+.settings/
+.project
+.cproject
+.autotools
+*.mxproject
+
+# MPLAB X
+disassembly/
+dist/
+nbproject/private/
+
+# VS Code & CLion
+.vscode/
+.cmake/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+# ==========================================
+# Operating System Garbage
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
