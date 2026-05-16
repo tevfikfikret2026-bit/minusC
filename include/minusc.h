@@ -2,7 +2,7 @@
  * minusc.h - The Ultimate Minus-C Syntax Mapping Dictionary
  * Contains EVERY standard C keyword, operator macro, and foundational type.
  */
-
+#include "minusc.h"
 #ifndef MINUSC_H
 #define MINUSC_H
 
