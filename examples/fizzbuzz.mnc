@@ -1,0 +1,37 @@
+/*
+ * examples/fizzbuzz.mnc - Core validation algorithm written in Minus-C syntax.
+ * This file demonstrates loops, logic branching, and compressed types.
+ */
+
+#include "../include/minusc.h"
+
+// Standart kütüphane fonksiyonunu takma adla bağlıyoruz (I/O)
+#define prnt printf
+
+i32 main(v_d) {
+    // 8-bitlik ultra hafif bir döngü sayacı (uint8_t -> u8)
+    u8 i = 1;
+
+    // whl = while döngüsü yapısı
+    whl (i <= 30) {
+        
+        // _if / _ei / _el mantıksal zinciri
+        _if (i % 3 == 0 && i % 5 == 0) {
+            prnt("FizzBuzz\n");
+        } 
+        _ei (i % 3 == 0) {
+            prnt("Fizz\n");
+        } 
+        _ei (i % 5 == 0) {
+            prnt("Buzz\n");
+        } 
+        _el {
+            // u8 tipindeki sayıyı ekrana basıyoruz
+            prnt("%d\n", i);
+        }
+
+        i++; // Sayacı artır
+    }
+
+    rtn 0; // return 0 -> rtn 0
+}
