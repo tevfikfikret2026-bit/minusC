@@ -18,14 +18,16 @@ We completely avoid the native `int` or `long` types, which vary across architec
 
 ---
 
-## 🔀 Minus-C Syntax Mapping (Dictionary)
+## 🗺️ Complete Keyword Mapping (Standard C vs. Minus-C)
 
-Minus-C replaces verbose standard C keywords with ultra-short aliases via compile-time preprocessor macros, maintaining 100% execution efficiency with zero runtime overhead.
+Every single architectural component of the C language is mapped to a highly compressed format:
 
-| Standard C | Minus-C | Description |
+| Category | Standard C Keywords | Minus-C Target |
 | :--- | :--- | :--- |
-| `uint8_t` / `int32_t` | `u8` / `i32` | Compressed fixed-width integer types |
-| `if` / `else if` / `else` | `_if` / `_ei` / `_el` | Shortened conditional branching |
-| `while` / `for` / `do` | `whl` / `_for` / `_do` | Minified loop constructs |
-| `struct` / `union` / `enum` | `str` / `uni` / `enm` | Condensed data structures |
-| `break` / `continue` / `return`| `brk` / `cnt` / `rtn` | Minimal control flow exits |
+| **Fixed Width Integers** | `uint8_t`, `int8_t`, `uint16_t`, `int32_t` | `u8`, `i8`, `u16`, `i32` |
+| **Standard Primitives** | `char`, `float`, `double`, `void`, `_Bool` | `chr`, `flt`, `dbl`, `v_d`, `bln` |
+| **Control Flow** | `if`, `else if`, `else`, `goto` | `_if`, `_ei`, `_el`, `gto` |
+| **Loops & Jumps** | `while`, `do`, `for`, `break`, `continue` | `whl`, `_do`, `_for`, `brk`, `cnt` |
+| **Structures** | `struct`, `union`, `enum`, `typedef` | `str`, `uni`, `enm`, `tdef` |
+| **Memory Modifiers**| `const`, `static`, `volatile`, `extern` | `cst`, `stc`, `vol`, `ext` |
+| **System Evaluation**| `sizeof`, `return` | `szo`, `rtn` |
