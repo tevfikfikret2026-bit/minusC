@@ -1,2 +1,5 @@
-# GitHub'a .mnc uzantılı tüm dosyaları C dili (C) olarak algılamasını söylüyoruz
+# .mnc dosyalarını doğrudan C dili olarak tanıtıyoruz
 *.mnc linguist-language=C
+
+# GitHub'ın bu dosyaları birer kod dosyası (text) olarak taramasını kesinleştiriyoruz
+*.mnc text
