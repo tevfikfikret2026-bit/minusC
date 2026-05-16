@@ -31,3 +31,13 @@ Every single architectural component of the C language is mapped to a highly com
 | **Structures** | `struct`, `union`, `enum`, `typedef` | `str`, `uni`, `enm`, `tdef` |
 | **Memory Modifiers**| `const`, `static`, `volatile`, `extern` | `cst`, `stc`, `vol`, `ext` |
 | **System Evaluation**| `sizeof`, `return` | `szo`, `rtn` |
+
+## 🌍 Global Installation (For Any User)
+
+If you want to use Minus-C across your entire system in any directory, you can install the compiler wrapper and core dictionary globally.
+
+### Linux & macOS
+Run the following terminal command inside the project root directory:
+```bash
+chmod +x install.sh
+./install.sh
