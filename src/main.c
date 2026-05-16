@@ -1,24 +1,29 @@
-/* 
- * Minimalist Standard C Entry Point
- * No bloated headers, no complex IO subsystems.
+/*
+ * src/main.c - Written completely in Minus-C syntax
  */
 
-// Sadece standart sabit genişlikli veri tipleri için (Hafiftir, yük getirmez)
-#include <stdint.h> 
+#include "minusc.h"
 
-// Uygulamanın ana fonksiyonu
-int main(void) {
+// Ana fonksiyon girişi
+i32 main(v_d) {
     
-    // Değişkenleri her zaman en küçük veri tipinde seçiyoruz (Memory Discipline)
-    uint8_t counter = 0;
-    uint32_t total_sum = 0;
+    // Veri tipleri artık u8 ve u32
+    u8 counter = 0;
+    u32 total_sum = 0;
 
-    // Basit, temiz bir döngü
-    while (counter < 100) {
-        total_sum += counter;
+    // whl (while) döngüsü kullanımı
+    whl (counter < 100) {
+        
+        // _if (if) kontrolü
+        _if (counter == 50) {
+            brk; // Döngüden çık (break)
+        }
+        _el {
+            total_sum += counter;
+        }
+        
         counter++;
     }
 
-    // İşletim sistemine başarılı çıkış kodu döndürülür
-    return 0; 
+    rtn 0; // Geri dönüş (return)
 }
